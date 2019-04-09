@@ -1,0 +1,21 @@
+.page-top{
+    position: relative;
+    &:after{
+        @include ba;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 337px;
+        background: url('../images/shadow.png') repeat-x center bottom;
+    }
+}
+
+.header{
+    .logo{
+        position: absolute;
+        z-index: 19;
+        left: (75 / 1920) * 100%;
+        top: 39px;
+        width: 71px;
+    }
+}

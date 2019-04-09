@@ -50,7 +50,7 @@ a {
 		-webkit-overflow-scrolling: touch;
 	}
 }
-.header {
+/* .header {
 	position: fixed;
 	z-index: 1010;
 	top: 0;
@@ -58,7 +58,7 @@ a {
 	right: 0;
 	background: #fff;
 	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-}
+} */
 .menuBox {
 	position: fixed;
 	z-index: 1009;
@@ -92,7 +92,7 @@ a {
 	}
 }
 /* pw */
-.pw { width: 1200px; margin: 0 auto; }
+.pw { width: 1100px; margin: 0 auto; }
 @media screen and (max-width:1366px) {
 	.pw { width: 1000px; }
 }

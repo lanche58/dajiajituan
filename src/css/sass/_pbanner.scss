@@ -1,0 +1,30 @@
+.pbanner{
+    color: #fff;
+    .txts{
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+    }
+    .en{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .ch{
+        font-size: 62px;
+    }
+    .text{
+        margin-top: 31px - 4px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    .line{
+        display: block;
+        margin: 32px - 14px auto 0;
+        width: 40px;
+        height: 1px;
+        background: #fff;
+    }
+}

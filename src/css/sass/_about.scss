@@ -1,0 +1,74 @@
+.page-bg{
+    background: $hc3;
+}
+
+.page-pa{
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+.ab1{
+    background: #fff;
+    padding-bottom: 120px;
+    .ab-pic{
+        width: (590 / 1100) * 100%;
+        float: right;
+        margin-left: (40 / 1100) * 100%;
+    }
+    .txts{
+        overflow: hidden;
+    }
+    .ab-ti{
+        margin-bottom: 53px - 13px;
+    }
+}
+
+.ab-pic{
+    position: relative;
+    .pai{
+        padding-bottom: (436 / 590) * 100%;
+    }
+    &:before{
+        @include ba;
+        top: 20px;
+        left: 20px;
+        bottom: -20px;
+        right: -20px;
+        background: $hc3;
+    }
+}
+
+.ab-ti{
+    font-size: 30px;
+    line-height: 1.4;
+    color: $fc1;
+}
+
+.ab2{
+    .freeTx{
+        width: 800px;
+        margin: 40px auto 0;
+    }
+    .ab-impor{
+        margin-top: 80px;
+    }
+    .ab-img-list{
+        margin-top: 80px;
+    }
+}
+
+.ab-impor{
+    font-size: 18px;
+    line-height: 1.4;
+    color: $mc1;
+}
+
+.ab-img-list{
+    li{
+        width: 33.33%;
+        float: left;
+    }
+    .pai{
+        padding-bottom: (250 / 368) * 100%;
+    }
+}
