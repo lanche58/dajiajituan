@@ -7,15 +7,129 @@
         top: 0;
         height: 337px;
         background: url('../images/shadow.png') repeat-x center bottom;
+        @media screen and (max-width:1024px) {
+            display: none;
+        }
     }
 }
 
 .header{
+    @media screen and (max-width:1024px) {
+        position: fixed;
+        z-index: 1010;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 60px;
+        background: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
     .logo{
         position: absolute;
         z-index: 19;
         left: (75 / 1920) * 100%;
         top: 39px;
         width: 71px;
+        @media screen and (max-width:1024px) {
+            top: -5px;
+            left: 5%;
+            transform-origin: left center;
+            transform: scale(.7);
+        }
+        > img{
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+        }
+        .m{
+            display: none;
+            @media screen and (max-width:1024px) {
+                display: block;
+            }
+        }
+    }
+}
+
+.mtop{
+    @media screen and (max-width:1024px) {
+        height: 60px;
+    }
+}
+
+.menu-handler{
+    background: $mc1;
+    .burger{
+        background: #fff;
+    }
+    @media screen and (max-width:1024px) {
+        display: block;
+    }
+    &.active{
+        background: none;
+        .burger{
+            background: $mc1;
+        }
+    }
+}
+
+.navMobile{
+    a{
+        display: block;
+        padding: 0 5%;
+        line-height: 1.4;
+        text-align: center;
+    }
+    dd > a{
+        border-bottom: 1px solid $hc1;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        font-size: 18px;
+        @media screen and (max-width:481px) {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            font-size: 16px;
+        }
+        &.act{
+            background: $mc1;
+            color: #fff;
+        }
+    }
+    .mtv{
+        padding: 10px 0;
+        display: none;
+        border-bottom: 1px solid $hc1;
+        > a{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            @media screen and (max-width:481px) {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.menu-slogan{
+    padding: 0 5%;
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+    > img{
+        vertical-align: bottom;
+        max-width: 100%;
+        transform-origin: center top;
+        transform: scale(.5);
+    }
+}
+
+.menuBox{
+    .navMobile{
+        padding-top: 80px;
+        margin-bottom: 30px;
+        @media screen and (max-width:481px) {
+            padding-top: 60px;
+        }
     }
 }

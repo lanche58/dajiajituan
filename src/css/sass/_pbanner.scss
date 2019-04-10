@@ -11,14 +11,38 @@
     .en{
         margin-bottom: 10px;
         font-size: 16px;
+        @media screen and (max-width:601px) {
+            margin-bottom: (10 / 600) * 100vw;
+        }
+        @media screen and (max-width:481px) {
+            font-size: 14px;
+        }
     }
     .ch{
         font-size: 62px;
+        @media screen and (max-width:1366px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width:861px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width:601px) {
+            font-size: 32px;
+        }
+        @media screen and (max-width:481px) {
+            font-size: 26px;
+        }
     }
     .text{
         margin-top: 31px - 4px;
         font-size: 20px;
         line-height: 1.4;
+        @media screen and (max-width:1366px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width:861px) {
+            display: none;
+        }
     }
     .line{
         display: block;
@@ -26,5 +50,8 @@
         width: 40px;
         height: 1px;
         background: #fff;
+        @media screen and (max-width:861px) {
+            display: none;
+        }
     }
 }

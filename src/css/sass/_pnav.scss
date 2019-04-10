@@ -4,13 +4,37 @@
     z-index: 29;
     height: 62px;
     line-height: 24px;
+    @media screen and (max-width:1024px) {
+        position: relative;
+        height: 52px;
+        border-bottom: 1px solid $hc1;
+        @include sx;
+    }
     ul{
         background: $mc1;
         background: $mco1;
+        @media screen and (max-width:1024px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            background: none;
+            letter-spacing: -6px;
+            text-align: center;
+            white-space: nowrap;
+        }
     }
     li{
         float: left;
         width: 25%;
+        @media screen and (max-width:1024px) {
+            display: inline-block;
+            vertical-align: bottom;
+            letter-spacing: 0;
+            float: none;
+            width: auto !important;
+            padding: 0 15px;
+        }
     }
     a{
         display: block;
@@ -18,9 +42,23 @@
         text-align: center;
         color: #fff;
         font-size: 16px;
+        @media screen and (max-width:1024px) {
+            position: relative;
+            padding: (52px - 24px) / 2 15px;
+            color: $fc1;
+            &:before{
+                @include hl($mc1, 4px);
+                bottom: 0;
+            }
+        }
         &.act{
             background: #fff;
             color: $mc1;
+            @media screen and (max-width:1024px) {
+                &:before{
+                    @include hlw;
+                } 
+            }
         }
         @media screen and (min-width:1025px) {
             &:hover{

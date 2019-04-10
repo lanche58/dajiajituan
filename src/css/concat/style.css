@@ -8,6 +8,20 @@
     top: 0;
     height: 337px;
     background: url("../images/shadow.png") repeat-x center bottom; }
+    @media screen and (max-width: 1024px) {
+      .page-top:after {
+        display: none; } }
+
+@media screen and (max-width: 1024px) {
+  .header {
+    position: fixed;
+    z-index: 1010;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); } }
 
 .header .logo {
   position: absolute;
@@ -15,6 +29,88 @@
   left: 3.90625%;
   top: 39px;
   width: 71px; }
+  @media screen and (max-width: 1024px) {
+    .header .logo {
+      top: -5px;
+      left: 5%;
+      transform-origin: left center;
+      transform: scale(0.7); } }
+  @media screen and (max-width: 1024px) {
+    .header .logo > img {
+      display: none; } }
+  .header .logo .m {
+    display: none; }
+    @media screen and (max-width: 1024px) {
+      .header .logo .m {
+        display: block; } }
+
+@media screen and (max-width: 1024px) {
+  .mtop {
+    height: 60px; } }
+
+.menu-handler {
+  background: #cc332f; }
+  .menu-handler .burger {
+    background: #fff; }
+  @media screen and (max-width: 1024px) {
+    .menu-handler {
+      display: block; } }
+  .menu-handler.active {
+    background: none; }
+    .menu-handler.active .burger {
+      background: #cc332f; }
+
+.navMobile a {
+  display: block;
+  padding: 0 5%;
+  line-height: 1.4;
+  text-align: center; }
+
+.navMobile dd > a {
+  border-bottom: 1px solid #ccc;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  font-size: 18px; }
+  @media screen and (max-width: 481px) {
+    .navMobile dd > a {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 16px; } }
+  .navMobile dd > a.act {
+    background: #cc332f;
+    color: #fff; }
+
+.navMobile .mtv {
+  padding: 10px 0;
+  display: none;
+  border-bottom: 1px solid #ccc; }
+  .navMobile .mtv > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px; }
+    @media screen and (max-width: 481px) {
+      .navMobile .mtv > a {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 14px; } }
+
+.menu-slogan {
+  padding: 0 5%;
+  height: 200px;
+  overflow: hidden;
+  text-align: center; }
+  .menu-slogan > img {
+    vertical-align: bottom;
+    max-width: 100%;
+    transform-origin: center top;
+    transform: scale(0.5); }
+
+.menuBox .navMobile {
+  padding-top: 80px;
+  margin-bottom: 30px; }
+  @media screen and (max-width: 481px) {
+    .menuBox .navMobile {
+      padding-top: 60px; } }
 
 .pbanner {
   color: #fff; }
@@ -28,18 +124,45 @@
   .pbanner .en {
     margin-bottom: 10px;
     font-size: 16px; }
+    @media screen and (max-width: 601px) {
+      .pbanner .en {
+        margin-bottom: 1.66667vw; } }
+    @media screen and (max-width: 481px) {
+      .pbanner .en {
+        font-size: 14px; } }
   .pbanner .ch {
     font-size: 62px; }
+    @media screen and (max-width: 1366px) {
+      .pbanner .ch {
+        font-size: 50px; } }
+    @media screen and (max-width: 861px) {
+      .pbanner .ch {
+        font-size: 40px; } }
+    @media screen and (max-width: 601px) {
+      .pbanner .ch {
+        font-size: 32px; } }
+    @media screen and (max-width: 481px) {
+      .pbanner .ch {
+        font-size: 26px; } }
   .pbanner .text {
     margin-top: 27px;
     font-size: 20px;
     line-height: 1.4; }
+    @media screen and (max-width: 1366px) {
+      .pbanner .text {
+        font-size: 18px; } }
+    @media screen and (max-width: 861px) {
+      .pbanner .text {
+        display: none; } }
   .pbanner .line {
     display: block;
     margin: 18px auto 0;
     width: 40px;
     height: 1px;
     background: #fff; }
+    @media screen and (max-width: 861px) {
+      .pbanner .line {
+        display: none; } }
 
 .pnav {
   position: absolute;
@@ -49,21 +172,68 @@
   z-index: 29;
   height: 62px;
   line-height: 24px; }
+  @media screen and (max-width: 1024px) {
+    .pnav {
+      position: relative;
+      height: 52px;
+      border-bottom: 1px solid #ccc;
+      overflow: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; } }
   .pnav ul {
     background: #cc332f;
     background: rgba(204, 51, 47, 0.9); }
+    @media screen and (max-width: 1024px) {
+      .pnav ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        background: none;
+        letter-spacing: -6px;
+        text-align: center;
+        white-space: nowrap; } }
   .pnav li {
     float: left;
     width: 25%; }
+    @media screen and (max-width: 1024px) {
+      .pnav li {
+        display: inline-block;
+        vertical-align: bottom;
+        letter-spacing: 0;
+        float: none;
+        width: auto !important;
+        padding: 0 15px; } }
   .pnav a {
     display: block;
     padding: 19px 5px;
     text-align: center;
     color: #fff;
     font-size: 16px; }
+    @media screen and (max-width: 1024px) {
+      .pnav a {
+        position: relative;
+        padding: 14px 15px;
+        color: #333; }
+        .pnav a:before {
+          content: "";
+          position: absolute;
+          left: auto;
+          right: 0;
+          bottom: 0;
+          width: 0;
+          height: 4px;
+          background: #cc332f;
+          transition: 600ms;
+          bottom: 0; } }
     .pnav a.act {
       background: #fff;
       color: #cc332f; }
+      @media screen and (max-width: 1024px) {
+        .pnav a.act:before {
+          left: 0;
+          right: auto;
+          width: 100%; } }
     @media screen and (min-width: 1025px) {
       .pnav a:hover {
         background: #fff;
@@ -73,6 +243,9 @@
   background: #1f1f1f;
   padding: 40px 0 45px;
   color: #8f8f8f; }
+  @media screen and (max-width: 601px) {
+    .footer {
+      padding: 6.66667vw 0 7.5vw; } }
   .footer a {
     color: #8f8f8f; }
     @media screen and (min-width: 1025px) {
@@ -81,10 +254,19 @@
   .footer .f-ma {
     float: right;
     margin-left: 3.63636%; }
+    @media screen and (max-width: 861px) {
+      .footer .f-ma {
+        display: none; } }
   .footer .f-cta {
     margin-bottom: 45px; }
+    @media screen and (max-width: 601px) {
+      .footer .f-cta {
+        margin-bottom: 7.5vw; } }
   .footer .b {
     padding-top: 40px; }
+    @media screen and (max-width: 601px) {
+      .footer .b {
+        padding-top: 6.66667vw; } }
 
 .f-ma {
   width: 116px;
