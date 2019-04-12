@@ -179,3 +179,19 @@
         }
     }
 }
+
+.ab5{
+    padding-bottom: 0;
+    .his-title{
+        margin-bottom: 62px - 12px;
+    }
+    @media screen and (max-width:861px) {
+        padding-bottom: 90px;
+    }
+    @media screen and (max-width:601px) {
+        padding-bottom: (90 / 600) * 100vw;
+        .his-title{
+            margin-bottom: (50 / 600) * 100vw;
+        }
+    }
+}

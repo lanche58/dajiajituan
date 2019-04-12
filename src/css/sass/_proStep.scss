@@ -1,0 +1,96 @@
+.step-list{
+    li{
+        width: 86px;
+        margin: 0 (50 / 1100) * 100%;
+        @media screen and (min-width:1025px) {
+            &:hover{
+                .icobox:before{
+                    transform: none;
+                    @include show;
+                }
+                .ico{
+                    background-position: center bottom;
+                }
+            }
+        }
+    }
+    .icobox{
+        position: relative;
+        height: 86px;
+        border-radius: 50%;
+        border: 1px solid $mc1;
+        &:before{
+            @include ba;
+            @include tblr;
+            border-radius: 50%;
+            background: $mc1;
+            transform: scale(1.3);
+            @include hide;
+            @include mt3;
+        }
+    }
+    .ico{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -40px 0 0 -40px;
+        width: 80px;
+        height: 80px;
+        @include mt3;
+    }
+    .name{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    @media screen and (max-width:861px) {
+        text-align: left;
+        padding: 0 5%;
+        li{
+            width: 25%;
+            margin: 20px 0 0;
+            text-align: center;
+        }
+        .icobox{
+            width: 86px;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width:641px) {
+        .icobox{
+            width: 76px;
+            height: 76px;
+        }
+        .ico{
+            transform: scale(.8);
+        }
+        .name{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width:601px) {
+        .name{
+            margin-top: 2.5vw;
+        }
+        .icobox{
+            width: 66px;
+            height: 66px;
+        }
+        .ico{
+            transform: scale(.7);
+        }
+    }
+    @media screen and (max-width:481px) {
+        padding: 0;
+        .icobox{
+            width: 50px;
+            height: 50px;
+        }
+        .ico{
+            transform: scale(.5);
+        }
+        .name{
+            font-size: 12px;
+            margin-top: 2vw;
+        }
+    }
+}

@@ -1,7 +1,6 @@
-.history-list{
+.history-wrap{
     position: relative;
-    padding-top: 100px;
-    overflow: hidden;
+    padding: (100 / 1100) * 100% 0 (40 / 1100) * 100% 0;
     &:before, &:after{
         @include ba;
     }
@@ -20,10 +19,20 @@
         border: 6px solid #fff;
         box-shadow: 0 0 9px rgba(0,0,0,.3);
     }
+    @media screen and (max-width:861px) {
+        padding: 0;
+        &:before, &:after{
+            display: none;
+        }
+    }
+}
+.history-list{
     li{
-        position: relative;
         width: 50%;
         float: right;
+    }
+    .history-item{
+        position: relative;
         padding: 0 45px 0 35px;
         margin-bottom: 50px;
         &:before, &:after{
@@ -42,35 +51,104 @@
             height: 1px;
             background: $fc3;
         }
-        &:nth-child(2){
-            margin-top: (105 / 1100) * 100%;
+    }
+    .le{
+        .history-item{
+            padding: 0 35px 0 45px;
+            &:after{
+                right: auto;
+                left: -5px;
+            }
+            &:before{
+                right: auto;
+                left: 1px;
+            }
         }
     }
-    .item1{
-        clear: both;
-        padding: 0 35px 0 45px;
-        &:after{
-            right: auto;
-            left: -5px;
+    .ri{
+        padding-top: (105 / 1100) * 100%;
+    }
+    @media screen and (max-width:1024px) {
+        .history-item{
+            padding-left: 0;
         }
-        &:before{
-            right: auto;
-            left: 1px;
+        .le .history-item{
+            padding-right: 0;
         }
     }
+    @media screen and (max-width:861px) {
+        display: none;
+    }
+}
+.history-item{
     .txts{
         padding: 40px;
         background: #fff;
+        @include mt3;
     }
     .ti{
         margin-bottom: 15px;
         line-height: 36px;
         font-size: 20px;
         color: $mc1;
+        @include mt3;
     }
     .year{
         @include di;
         margin-right: 15px;
         font-size: 36px;
+    }
+    @media screen and (min-width:1025px) {
+        &:hover{
+            .txts{
+                background: $mc1;
+                color: #fff;
+            }
+            .ti{
+                color: #fff;
+            }
+        }
+    }
+    @media screen and (max-width:861px) {
+        box-shadow: 0 5px 8px rgba(0,0,0,.1);
+        + .history-item{
+            margin-top: 50px;
+        }
+        .txts{
+            padding-left: 5%; padding-right: 5%;
+        }
+        .ti{
+            line-height: 32px;
+        }
+        .year{
+            font-size: 32px;
+        }
+    }
+    @media screen and (max-width:601px) {
+        .txts{
+            padding-top: (40 / 600) * 100vw;
+            padding-bottom: (40 / 600) * 100vw;
+        }
+        + .history-item{
+            margin-top: (50 / 600) * 100vw;
+        }
+        .ti{
+            margin-bottom: (15 / 600) * 100vw;
+            line-height: 26px;
+            font-size: 16px;
+        }
+        .year{
+            font-size: 26px;
+        }
+    }
+    @media screen and (max-width:601px) {
+        .ti{
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .year{
+            margin-right: 10px;
+            font-size: 22px;
+        }
     }
 }

@@ -1,0 +1,42 @@
+.pro-nav{
+    a{
+        width: 186px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        background: $fc1;
+        color: #fff;
+        line-height: 46px;
+        text-align: center;
+        font-size: 16px;
+        &.act{
+            background: $mc1;
+        }
+        @media screen and (min-width:1025px) {
+            &:hover{
+                background: $mc1;
+            }
+        }
+    }
+    @media screen and (max-width:1024px) {
+        text-align: left;
+        a{
+            width: 20%;
+        }
+    }
+    @media screen and (max-width:861px) {
+        a{
+            width: 33.33%;
+        }
+    }
+    @media screen and (max-width:601px) {
+        a{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width:481px) {
+        a{
+            width: 50%;
+            line-height: 40px;
+        }
+    }
+}

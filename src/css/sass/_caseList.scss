@@ -1,0 +1,56 @@
+.case-list{
+    margin-left: -25px;
+    li{
+        width: 33.33%;
+        float: left;
+        margin-bottom: 25px;
+    }
+    .case-item{
+        margin-left: 25px;
+    }
+    @media screen and (max-width:861px) {
+        li{
+            width: 50%;
+        }
+    }
+    @media screen and (max-width:601px) {
+        margin-left: -15px;
+        li{
+            margin-bottom: (25 / 600) * 100%;
+        }
+        .case-item{
+            margin-left: 15px;
+        }
+    }
+    @media screen and (max-width:481px) {
+        li{
+            width: 100%;
+        }
+    }
+}
+
+.case-item{
+    display: block;
+    position: relative;
+    .pai{
+        padding-bottom: (266 / 353) * 100%;
+    }
+    .nowti{
+        @include plr;
+        bottom: 0;
+        @include b5;
+        color: #fff;
+        line-height: 54px;
+        text-align: center;
+    }
+    @media screen and (max-width:601px) {
+        .nowti{
+            line-height: 44px;
+        }
+    }
+    @media screen and (max-width:481px) {
+        .nowti{
+            line-height: 54px;
+        }
+    }
+}

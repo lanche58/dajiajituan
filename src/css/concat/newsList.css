@@ -1,0 +1,11 @@
+.news-list {
+  margin-left: -25px; }
+  .news-list li {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 35px; }
+  .news-list .news-item {
+    margin-left: 25px; }
+
+.news-item {
+  display: block; }

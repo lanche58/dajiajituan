@@ -22,64 +22,83 @@
 <div class="container">
     <div class="ab5 fixbg page-pa" style="background-image: url(img/abfixbg.jpg);">
         <div class="pw">
-            <div class="his-title">
+            <div class="his-title tac">
                 <h4 class="en">History</h4>
                 <h3 class="ch">艺术创想·考究大美</h3>
             </div>
-            <ul class="history-list">
-                <li class="item1">
-                    <div class="txts">
-                        <p class="ti"><span class="year">2017</span>谋势</p>
-                        <div class="freeTx">
-                            风景园林工程设计专项甲级资质<br>
-                            制定集团化的战略方针<br>
-                            向人居环境建设“专、精、特”<br>
-                            转型升级<br>
-                            运筹帷幄，决胜千里<br>
-                            ......<br>
+            <div class="history-wrap">
+                <ul class="history-list clearfix scroll-animation">
+                    <li class="le"></li>
+                    <li class="ri"></li>
+                </ul>
+                <div class="history-cont">
+                    <div class="history-item transY trans">
+                        <div class="txts">
+                            <p class="ti"><span class="year">2017</span>谋势</p>
+                            <div class="freeTx">
+                                风景园林工程设计专项甲级资质<br>
+                                制定集团化的战略方针<br>
+                                向人居环境建设“专、精、特”<br>
+                                转型升级<br>
+                                运筹帷幄，决胜千里<br>
+                                ......<br>
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li class="item2">
-                    <div class="txts">
-                        <p class="ti"><span class="year">2017</span>谋势</p>
-                        <div class="freeTx">
-                            风景园林工程设计专项甲级资质<br>
-                            制定集团化的战略方针<br>
-                            向人居环境建设“专、精、特”<br>
-                            转型升级<br>
-                            运筹帷幄，决胜千里<br>
-                            ......<br>
+                    <div class="history-item transY trans">
+                        <div class="txts">
+                            <p class="ti"><span class="year">2015</span>创新</p>
+                            <div class="freeTx">
+                                四川省江苏商会会长单位<br>
+                                楷木河湿地公园<br>
+                                ——“天府杯”金奖<br>
+                                置信·逸景苑<br>
+                                ——“天府杯”金奖<br>
+                                “策划、规划、设计、施工”<br>
+                                以“工匠精神”开拓进取<br>
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li class="item1">
-                    <div class="txts">
-                        <p class="ti"><span class="year">2017</span>谋势</p>
-                        <div class="freeTx">
-                            风景园林工程设计专项甲级资质<br>
-                            制定集团化的战略方针<br>
-                            向人居环境建设“专、精、特”<br>
-                            转型升级<br>
-                            运筹帷幄，决胜千里<br>
-                            ......<br>
+                    <div class="history-item transY trans">
+                        <div class="txts">
+                            <p class="ti"><span class="year">2017</span>谋势</p>
+                            <div class="freeTx">
+                                风景园林工程设计专项甲级资质<br>
+                                制定集团化的战略方针<br>
+                                向人居环境建设“专、精、特”<br>
+                                转型升级<br>
+                                运筹帷幄，决胜千里<br>
+                                ......<br>
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li class="item2">
-                    <div class="txts">
-                        <p class="ti"><span class="year">2017</span>谋势</p>
-                        <div class="freeTx">
-                            风景园林工程设计专项甲级资质<br>
-                            制定集团化的战略方针<br>
-                            向人居环境建设“专、精、特”<br>
-                            转型升级<br>
-                            运筹帷幄，决胜千里<br>
-                            ......<br>
+                    <div class="history-item transY trans">
+                        <div class="txts">
+                            <p class="ti"><span class="year">2015</span>创新</p>
+                            <div class="freeTx">
+                                四川省江苏商会会长单位<br>
+                                楷木河湿地公园<br>
+                                ——“天府杯”金奖<br>
+                                置信·逸景苑<br>
+                                ——“天府杯”金奖<br>
+                                “策划、规划、设计、施工”<br>
+                                以“工匠精神”开拓进取<br>
+                            </div>
                         </div>
                     </div>
-                </li>
-            </ul>
+                    <div class="history-item transY trans">
+                        <div class="txts">
+                            <p class="ti"><span class="year">2017</span>谋势</p>
+                            <div class="freeTx">
+                                风景园林工程设计专项甲级资质<br>
+                                制定集团化的战略方针<br>
+                                向人居环境建设“专、精、特”<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- history-cont -->
+            </div>
         </div>
     </div>
     <!-- ab4 -->
@@ -88,5 +107,25 @@
 @@include('./footer.html')
 <script src="js/plugin.js"></script>
 <script src="js/page.js"></script>
+<script>
+    $(function(){
+        $('.history-cont .history-item').each(function(i) {
+            if (w_width <= 861) { return; }
+
+            $(this).css({'transition-delay': 200*i + 'ms'});
+
+            var clone = $(this).clone(),
+                $left = $('.history-list .le'),
+                $right = $('.history-list .ri'),
+                $parent = $(this).parent(),
+                len = $parent.length;
+
+            i % 2 === 0 ? $left.append(clone) : $right.append(clone);
+            if (i >= len - 1) {
+                $parent.remove();
+            }
+        });
+    })
+</script>
 </body>
 </html>

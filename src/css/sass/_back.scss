@@ -1,0 +1,64 @@
+.news-back{
+    border-top: 1px solid $hc1;
+    padding-top: 40px;
+    a{
+        display: block;
+        width: 120px;
+        line-height: 38px;
+        text-align: center;
+        font-size: 16px;
+        white-space: nowrap;
+        @media screen and (min-width:1025px) {
+            &:hover{
+                background: $mc1;
+                color: #fff;
+            }
+        }
+    }
+    .back{
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .prev{
+        float: left;
+        .icon{
+            margin-right: 10px;
+        }
+    }
+    .next{
+        float: right;
+        .icon{
+            margin-left: 10px;
+        }
+    }
+    .arrow{
+        background: $fc3;
+        color: #fff;
+    }
+    .icon{
+        @include di;
+    }
+    @media screen and (max-width:1024px) {
+        .arrow{
+            background: $mc1;
+        }
+    }
+    @media screen and (max-width:601px) {
+        padding-top: (40 / 600) * 100%;
+    }
+    @media screen and (max-width:481px) {
+        a{
+            width: 90px;
+            font-size: 14px;
+        }
+        .icon{
+            font-size: 14px;
+        }
+        .prev .icon{
+            margin-right: 5px;
+        }
+        .next .icon{
+            margin-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.pager{
+    a{
+        width: 44px;
+        height: 42px;
+        border: 1px solid $hc1;
+        margin: 0 5px;
+        line-height: 40px;
+        font-size: 16px;
+        &.act{
+            background: $mc1;
+            border-color: $mc1;
+            color: #fff;
+        }
+    }
+    .arrow{
+        width: 72px;
+        margin: 0 15px;
+        font-size: 14px;
+    }
+    @media screen and (min-width:1025px) {
+        &:hover{
+            a{
+                background: $mc1;
+                border-color: $mc1;
+                color: #fff;
+            }
+        }
+    }
+    @media screen and (max-width:481px) {
+        a, .arrow{
+            margin: 0 1px;
+        }
+        a{
+            width: 40px;
+            font-size: 14px;
+        }
+        .arrow{
+            width: 60px;
+            font-size: 12px;
+        }
+    }
+}
