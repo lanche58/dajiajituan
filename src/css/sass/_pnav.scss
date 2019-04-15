@@ -39,11 +39,13 @@
     a{
         display: block;
         padding: (62px - 24px) / 2 5px;
+        border-left: 1px solid $mc2;
         text-align: center;
         color: #fff;
         font-size: 16px;
         @media screen and (max-width:1024px) {
             position: relative;
+            border-left: none;
             padding: (52px - 24px) / 2 15px;
             color: $fc1;
             &:before{
@@ -51,8 +53,12 @@
                 bottom: 0;
             }
         }
+        @media screen and (max-width:481px) {
+            font-size: 14px;
+        }
         &.act{
             background: #fff;
+            border-color: #fff;
             color: $mc1;
             @media screen and (max-width:1024px) {
                 &:before{
@@ -63,6 +69,7 @@
         @media screen and (min-width:1025px) {
             &:hover{
                 background: #fff;
+                border-color: #fff;
                 color: $mc1;
             }
         }
@@ -71,4 +78,8 @@
 
 .news-page{
     .pnav li{ width: 50%; }
+}
+
+.case-page{
+    .pnav li{ width: 20%; }
 }

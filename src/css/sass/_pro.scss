@@ -14,7 +14,7 @@
     }
     @media screen and (max-width:601px) {
         .freeTx{
-            margin-bottom: (40 / 600) * 100vw;
+            margin-top: (40 / 600) * 100vw;
         }
         .step-list{
             margin-top: (40 / 600) * 100vw;
@@ -55,5 +55,16 @@
         .achi-list{
             margin-bottom: 40px;
         } 
+    }
+    @media screen and (max-width:861px) {
+        .achi-list{
+            margin-top: 60px;
+        }
+    }
+    @media screen and (max-width:601px) {
+        .achi-list{
+            margin-top: 10vw;
+            margin-bottom: (40 / 600) * 100vw;
+        }
     }
 }

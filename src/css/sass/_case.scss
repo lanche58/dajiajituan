@@ -1,0 +1,8 @@
+.case1{
+    .case-list{
+        margin-bottom: 70px - 25px;
+        @media screen and (max-width:601px) {
+            margin-bottom: 7.5vw;
+        }
+    }
+}

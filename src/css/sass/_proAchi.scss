@@ -17,6 +17,23 @@
             margin-bottom: 30px;
         }
     }
+    @media screen and (max-width:1024px) {
+        margin-left: -20px;
+        .achi-item{
+            margin-left: 20px;
+        }
+    }
+    @media screen and (max-width:861px) {
+        li{
+            width: 50%;
+        }
+    }
+    @media screen and (max-width:601px) {
+        li{ 
+            width: 100%; 
+            margin-bottom: 5vw;
+        }
+    }
 }
 
 .achi-item{
@@ -46,5 +63,29 @@
     }
     .text{
         margin-top: 30px;
+    }
+    @media screen and (max-width:1024px) {
+        .ico{
+            transform: scale(.85);
+        }
+        .icobox{
+            width: 57px;
+            height: 57px;
+        }
+        .text{
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width:861px) {
+        .text{
+            margin-top: 30px;
+        }
+    }
+    @media screen and (max-width:601px) {
+        height: auto;
+        padding: 7.5vw 5%;
+        .text{
+            margin-top: 5vw;
+        }
     }
 }
