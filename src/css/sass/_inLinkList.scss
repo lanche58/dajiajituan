@@ -1,0 +1,120 @@
+.inLink-list{
+    @include plr;
+    bottom: 0;
+    li{
+        width: 25%;
+        float: left;
+        @include b5;
+    }
+    @media screen and (max-width:1024px) {
+        position: static;
+        li{
+            background: $fc3;
+        }
+    }
+    @media screen and (max-width:641px) {
+        li{
+            width: 50%;
+            border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+    }
+}
+
+.inLink-item{
+    display: block;
+    position: relative;
+    border-left: 1px solid #fff;
+    border-color: rgba(255,255,255,.2);
+    color: #fff;
+    .pic2{
+        height: 156px;
+        @include bg;
+        @include hide;
+        @include mt4;
+        &:after{
+            @include ba;
+            @include tblr;
+            background: $mc1;
+            background: $mco2;
+        }
+    }
+    .txts{
+        position: absolute;
+        left: 25%;
+        top: 35px;
+        width: 50%;
+        text-align: center;
+        @include mt4;
+    }
+    .icobox{
+        position: relative;
+        height: 60px;
+    }
+    .ico{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -30px;
+        width: 100%;
+        height: 60px;
+        background-position: center;
+    }
+    .name{
+        margin-top: 8px;
+        font-size: 18px;
+    }
+    .more{
+        position: absolute;
+        bottom: 35px;
+        right: (50 / 480) * 100%;
+        transform: translateX(-10px);
+        @include hide;
+        @include mt4;
+    }
+    @media screen and (min-width:1025px) {
+        &:hover{
+            .pic2{
+                @include show;
+            }
+            .txts{
+                left: 0;
+            }
+            .more{
+                transform: none;
+                @include show;
+            }
+        }
+    }
+    @media screen and (max-width:1024px) {
+        .txts{
+            width: 100%;
+            left: 0;
+        }
+    }
+    @media screen and (max-width:481px) {
+        .ico{
+            transform: scale(.75);
+        }
+        .icobox{
+            height: 45px;
+        }
+        .name{
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        .pic2{
+            padding-top: 116px;
+            padding-top: 25px;
+        }
+    }
+}
+
+.ix-more{
+    line-height: 20px;
+    font-size: 12px;
+    .icon{
+        @include di;
+        margin-left: 7px;
+        font-size: 12px;
+    }
+}

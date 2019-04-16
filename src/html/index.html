@@ -1,32 +1,102 @@
 @@include('./top.html')
 </head>
 <body>
-@@include('./header.html',{
-    "index": "act"
-})
 <div class="banner-box">
-    <div class="banner u-slick">
-        <div class="item"><a href="#">
-            <div class="pic2"><img src="img/banner1.jpg" alt=""></div>
-        </a></div>
+    @@include('./header.html')
+    <div class="banner cg-s u-slick">
+        <div class="item">
+            <div class="pic2"><img src="img/banner.jpg" alt=""><img src="img/mbanner.jpg" class="m" alt=""></div>
+            <div class="txts tac">
+                <h2 class="en trans transY dly-1">Great Master Investment Group</h2>
+                <h1 class="ch trans transY dly-2">精致生活的创投者</h1>
+                <p class="text trans transY dly-3">转载十余载，大家环境在不断的摸索、进步、积淀中，形成了独有的企业文化理念。学习、创新、激情、诚信、团队是大家环境企业文化的核心</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic2"><img src="img/banner.jpg" alt=""><img src="img/mbanner.jpg" class="m" alt=""></div>
+            <div class="txts tac">
+                <h2 class="en trans transY dly-1">Great Master Investment Group</h2>
+                <h1 class="ch trans transY dly-2">精致生活的创投者</h1>
+                <p class="text trans transY dly-3">转载十余载，大家环境在不断的摸索、进步、积淀中，形成了独有的企业文化理念。学习、创新、激情、诚信、团队是大家环境企业文化的核心</p>
+            </div>
+        </div>
     </div>
+    <!-- banner -->
+    <ul class="inLink-list scroll-animation clearfix">
+        <li class="trans transX"><a href="#" class="inLink-item">
+            <div class="pic2" style="background-image: url(img/ix_i1.jpg);"></div>
+            <div class="txts">
+                <div class="icobox"><i class="ico" style="background-image: url(img/ix_ico1.png);"></i></div>
+                <p class="name">文化产业</p>
+            </div>
+            <div class="more"><span class="ix-more btn">查看详细<i class="icon iconfont icon-forward"></i></span></div>
+        </a></li>
+        <li class="trans transX"><a href="#" class="inLink-item">
+            <div class="pic2" style="background-image: url(img/ix_i1.jpg);"></div>
+            <div class="txts">
+                <div class="icobox"><i class="ico" style="background-image: url(img/ix_ico2.png);"></i></div>
+                <p class="name">生态建设</p>
+            </div>
+            <div class="more"><span class="ix-more btn">查看详细<i class="icon iconfont icon-forward"></i></span></div>
+        </a></li>
+        <li class="trans transX"><a href="#" class="inLink-item">
+            <div class="pic2" style="background-image: url(img/ix_i1.jpg);"></div>
+            <div class="txts">
+                <div class="icobox"><i class="ico" style="background-image: url(img/ix_ico3.png);"></i></div>
+                <p class="name">高新科技</p>
+            </div>
+            <div class="more"><span class="ix-more btn">查看详细<i class="icon iconfont icon-forward"></i></span></div>
+        </a></li>
+        <li class="trans transX"><a href="#" class="inLink-item">
+            <div class="pic2" style="background-image: url(img/ix_i1.jpg);"></div>
+            <div class="txts">
+                <div class="icobox"><i class="ico" style="background-image: url(img/ix_ico4.png);"></i></div>
+                <p class="name">乡村振兴</p>
+            </div>
+            <div class="more"><span class="ix-more btn">查看详细<i class="icon iconfont icon-forward"></i></span></div>
+        </a></li>
+    </ul>
 </div>
 <!-- banner-box -->
-<div class="container">
-    
-</div>
-<!-- container -->
 @@include('./footer.html')
-<div class="vwrap">
-    <div class="videobtg"></div>
-    <div class="videobox">
-        <div id="videobox"></div>
-        <div class="close"><i></i></div>
-    </div>
-</div>
 <script src="js/plugin.js"></script>
-<script src="js/video/player.mini.js"></script>
 <script src="js/page.js"></script>
-<script src="js/index.js"></script>
+<script>
+    function indexBox() {
+        if(!isMobile){
+            $('.banner').css({ height: w_height});
+            $('.banner .item').css({ height: w_height});
+            setImgMax($('.banner .pic2'), 1920, 920, w_width, w_height);
+        }else{
+            $('.banner').css({ height: 'auto' });
+            $('.banner .item').css({ height: 'auto' });
+            $('.banner .pic2').attr({ 'style': '' });
+        }
+    }
+    indexBox();
+    $(window).resize(function() {
+        indexBox();
+    });
+    $(function(){
+        $('.banner').on('init', function(event, slick, currentSlide, nextSlide) {
+            $('.banner .item').first().addClass('active');
+        });
+        $('.banner').slick({
+            speed: 1000,
+            arrows: false,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            pauseOnHover: false
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $('.banner .item').removeClass('active');
+            $('.banner .item').eq(nextSlide).addClass('active');
+        });
+        $('.inLink-list li').each(function(i, e) {
+            $(this).css({'transition-delay': 200*i + 'ms'})
+        });
+    })
+</script>
 </body>
 </html>

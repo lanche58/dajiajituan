@@ -1,0 +1,42 @@
+@@include('./top.html')
+</head>
+<body class="case-page">
+<div class="page-top">
+    @@include('./header.html')
+    <div class="caseImg-list cg-s case-arrow u-slick">
+        <div class="item"><div class="pic2"><img src="img/case_i3.jpg" alt=""></div></div>
+        <div class="item"><div class="pic2"><img src="img/case_i3.jpg" alt=""></div></div>
+        <div class="item"><div class="pic2"><img src="img/case_i3.jpg" alt=""></div></div>
+    </div>
+</div>
+<!-- page-top -->
+<div class="container">
+    <div class="case2 pw2 page-pa">
+        <p class="ti">国家一级博物馆——武侯祠</p>
+        <div class="freeTx">
+            <p>项目介绍：“四川省风范大家投资集团有限公司”成立于2013年，注册资金5000万。集团凭借专家智库、实战型专业团队、雄厚资金等优势，以股权经营、资源整合等方式积极开展实业投资、股权投资、科技投资，初步形成了集团化、多元化、专业化的战略发展格局，成为中国独。集团凭借专家智库、实战型专业团队、雄厚资金等优势，以股权经营、资源整合等方式积极开展实业投资、股权投资、科技投资，初步形成了集团化、多元化、专业化的战略发展格局，成为中国独具创新性的投资具创新性的投资品牌新势力！</p>
+        </div>
+        <div class="news-back clearfix">
+            <a href="#" class="arrow prev"><i class="icon iconfont icon-xia"></i>上一篇</a>
+            <a href="#" class="arrow next">下一篇<i class="icon iconfont icon-forward"></i></a>
+            <a href="case.html" class="back">返回列表</a>
+        </div>
+    </div>
+</div>
+<!-- container -->
+@@include('./footer.html')
+<script src="js/plugin.js"></script>
+<script src="js/page.js"></script>
+<script>
+    $(function(){
+        $('.caseImg-list').slick({
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            pauseOnHover: false
+        });
+    })
+</script>
+</body>
+</html>

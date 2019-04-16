@@ -30,6 +30,9 @@
         left: (75 / 1920) * 100%;
         top: 39px;
         width: 71px;
+        @media screen and (max-width:1366px) {
+            top: 29px;
+        }
         @media screen and (max-width:1024px) {
             top: -5px;
             left: 5%;
@@ -72,64 +75,222 @@
     }
 }
 
-.navMobile{
-    a{
-        display: block;
-        padding: 0 5%;
-        line-height: 1.4;
-        text-align: center;
+.menuBox{
+    top: 0;
+    right: -53.8%;
+    width: 53.8%;
+    padding: (145 / 1920) * 100% 145px 0 75px;
+    line-height: 24px;
+    display: none;
+    .menu-slogan{
+        position: absolute;
+        top: 30px;
+        right: 30px;
     }
-    dd > a{
-        border-bottom: 1px solid $hc1;
-        padding-top: 17px;
-        padding-bottom: 17px;
-        font-size: 18px;
-        @media screen and (max-width:481px) {
-            padding-top: 14px;
-            padding-bottom: 14px;
-            font-size: 16px;
-        }
-        &.act{
-            background: $mc1;
-            color: #fff;
-        }
-    }
-    .mtv{
-        padding: 10px 0;
-        display: none;
+    dd{
+        overflow: hidden;
+        padding: 33px 0 23px;
         border-bottom: 1px solid $hc1;
         > a{
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 16px;
-            @media screen and (max-width:481px) {
-                padding-top: 8px;
-                padding-bottom: 8px;
-                font-size: 14px;
+            float: left;
+            width: 150px;
+            font-size: 24px;
+            color: $fc1;
+        }
+        .mtv{
+            overflow: hidden;
+            > a{
+                float: left;
+                margin: 0 38px 10px 0;
+                font-size: 16px;
             }
         }
+    }
+    .close{
+        position: absolute;
+        z-index: 99;
+        top: (60 / 1030) * 100%;
+        left: 45px;
+        width: 29px;
+        height: 29px;
+        background: url('../images/close.png') no-repeat center;
+        @include mt4;
+        @media screen and (min-width:1025px) {
+            &:hover{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    a{
+        @media screen and (min-width:1025px) {
+            &:hover{
+                color: $mc1;
+            }
+        } 
+    }
+    @media screen and (max-width:1366px) {
+        padding-left: 55px;
+        .close{
+            left: 25px;
+        }
+        dd{
+            padding: 23px 0 13px;
+            > a{
+                width: 120px;
+                font-size: 20px;
+            }
+            .mtv{
+                > a{
+                    margin-right: 30px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1024px) {
+        width: 100%;
+        top: -100%;
+        right: 0;
+        padding: 82px 0 0;
+        .menu-slogan{
+            position: static;
+            text-align: center;
+            margin-top: 30px;
+        }
+        dd{
+            padding: 0;
+            text-align: center;
+            a{
+                display: block;
+            }
+            > a{
+                float: none;
+                padding: (60px - 24px) / 2 5%;
+                width: 100%;
+                font-size: 18px;
+                &.act{
+                    background: $mc1;
+                    color: #fff;
+                }
+            }
+            .mtv{
+                padding: 10px 5%;
+                display: none;
+                > a{
+                    float: none;
+                    margin: 0;
+                    padding: (40px - 24px) / 2 0;
+                    font-size: 16px;
+                }
+            }
+        }
+        .close{
+            left: 5%;
+            top: 40px;
+        }
+    }
+    @media screen and (max-width:481px) {
+        padding-top: 62px;
+        .close{
+            top: 15px;
+            transform-origin: left center;
+            transform: scale(.7);
+        }
+    }
+}
+
+.menuBlack{
+    @media screen and (max-width:1024px) {
+        display: none;
     }
 }
 
 .menu-slogan{
-    padding: 0 5%;
-    height: 200px;
-    overflow: hidden;
-    text-align: center;
-    > img{
-        vertical-align: bottom;
+    img{
         max-width: 100%;
-        transform-origin: center top;
-        transform: scale(.5);
+        vertical-align: bottom;
     }
 }
 
-.menuBox{
-    .navMobile{
-        padding-top: 80px;
-        margin-bottom: 30px;
-        @media screen and (max-width:481px) {
-            padding-top: 60px;
+.nav{
+    position: absolute;
+    right: (188 / 1920) * 100%;
+    top: 39px + 23px;
+    z-index: 19;
+    line-height: 24px;
+    @media screen and (max-width:1366px) {
+        top: 29px + 23px;
+    }
+    li{
+        float: left;
+        + li{
+            margin-left: 42px;
+            @media screen and (max-width:1366px) {
+                margin-left: 37px;
+            }
+        }
+        > a{
+            color: #fff;
+            font-size: 16px;
+            @media screen and (min-width:1025px) {
+                &:hover{
+                    color: $mc1;
+                }
+            }
+            @media screen and (max-width:1366px) {
+                font-size: 14px;
+            }
         }
     }
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
+}
+
+.nav-btn{
+    position: absolute;
+    z-index: 19;
+    right: (95 / 1920) * 100%;
+    top: 39px + 25px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    span{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        @include mt3;
+    }
+    .l1{
+        top: 0;
+        animation: long 1.2s linear alternate infinite both;
+    }
+    .l2{
+        top: 9px;
+        animation: long 1.2s .2s linear alternate infinite both;
+    }
+    .l3{
+        top: 18px;
+        animation: long 1.2s .4s linear alternate infinite both;
+    }
+    @media screen and (min-width:1025px) {
+        &:hover{
+            span{
+                background: $mc1;
+            }
+        }
+    }
+    @media screen and (max-width:1366px) {
+        top: 29px + 25px;
+    }
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
+}
+
+@keyframes long{
+    0%{ width: 10px; }
+    100%{ width: 100%; }
 }

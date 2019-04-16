@@ -135,9 +135,12 @@
         margin-top: 14px - 8px;
         font-size: 16px;
     }
+    .ti3{
+        font-size: 30px;
+    }
     .line{
         display: block;
-        margin: 40px auto 0;
+        margin: 15px auto 0;
         width: 44px;
         height: 4px;
         background: $mc1;
@@ -145,11 +148,14 @@
     @media screen and (max-width:601px) {
         .line{
             width: (44 / 600) * 100vw;
-            margin-top: (40 / 600) * 100vw;
+            margin-top: (15 / 600) * 100vw;
+        }
+        .ti3{
+            font-size: 24px;
         }
     }
     @media screen and (max-width:481px) {
-        .ti1{
+        .ti3, .ti1{
             font-size: 22px;
         }
         .ti2{

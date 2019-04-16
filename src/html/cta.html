@@ -1,0 +1,78 @@
+@@include('./top.html')
+</head>
+<body>
+<div class="page-top">
+    @@include('./header.html')
+    @@include('./pbanner.html',{
+        "img": "cta_banner.jpg",
+        "en": "Contact us",
+        "ch": "联系我们"
+    })
+</div>
+<!-- page-top -->
+<div class="container">
+    <div class="cta1 page-pa">
+        <div class="pw">
+            <div class="cta-title tac">
+                <h2 class="ch">四川省风范大家投资集团有限公司</h2>
+                <h3 class="en"><span>Sichuan demeanor Investment Group Limited</span></h3>
+            </div>
+            <ul class="cta-list fib">
+                <li class="ib"><div class="cta-item">
+                    <span class="icon iconfont icon-dizhi"></span>
+                    <p class="name">addeess</p>
+                    <p class="text"><a href="#">中国·成都·金牛区金科中路32号16栋</a></p>
+                </div></li>
+                <li class="ib"><div class="cta-item">
+                    <span class="icon iconfont icon-dianhua"></span>
+                    <p class="name">tel</p>
+                    <p class="text"><a href="#" class="na">028-89991008</a></p>
+                </div></li>
+                <li class="ib"><div class="cta-item">
+                    <span class="icon iconfont icon-dayin"></span>
+                    <p class="name">Fax</p>
+                    <p class="text">028-87531155</p>
+                </div></li>
+                <li class="ib"><div class="cta-item">
+                    <div class="pic2"><img src="img/ma2.jpg" alt=""></div>
+                    <p class="text">微信公众账号：landscape-dj</p>
+                </div></li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
+<!-- container -->
+@@include('./footer.html')
+<script src="js/plugin.js"></script>
+<script src="js/page.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=7d3a4c6e5e8a70dd200a2eeacf8c1b50"></script>
+<script>
+    $(function(){
+        function ShowMap(zuobiao, showmapInfo, zoom) {
+            var arrzuobiao = zuobiao.split(',');
+                var map = new BMap.Map("map");
+            var point = new BMap.Point(arrzuobiao[0], arrzuobiao[1]);
+            var marker = new BMap.Marker(point, {
+                icon: new BMap.Icon("images/mapi.png", new BMap.Size(86, 86))
+            })
+            map.addOverlay(marker);
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+            map.centerAndZoom(point, zoom);
+            map.disableScrollWheelZoom();
+            var opts = {
+                width: 400
+            }
+            var infoWindow = new BMap.InfoWindow(showmapInfo, opts);
+            marker.addEventListener("click", function () {
+                if (w_width>=641) {
+                    map.openInfoWindow(infoWindow,point);
+                }  
+            });
+        };
+        var k='<p style="font-size: 18px; color: #666;">地址：四川省绵阳市游仙区游仙东路89号</p><p style="font-size: 18px; color: #666;">邮编：621000</p>'; 
+        ShowMap('104.018887,30.723201', k, '17');
+    })
+</script>
+</body>
+</html>

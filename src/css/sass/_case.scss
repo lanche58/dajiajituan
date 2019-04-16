@@ -6,3 +6,29 @@
         }
     }
 }
+
+.case2{
+    .ti{
+        font-size: 28px;
+        color: $fc1;
+    }
+    .freeTx{
+        margin-top: 45px;
+        padding-bottom: 120px;
+        
+    }
+    @media screen and (max-width:601px) {
+        .ti{
+            font-size: 24px;
+        } 
+        .freeTx{
+            margin-top: 7.5vw;
+            padding-bottom: (120 / 600) * 100vw;
+        }
+    }
+    @media screen and (max-width:601px) {
+        .ti{
+            font-size: 22px;
+        } 
+    }
+}

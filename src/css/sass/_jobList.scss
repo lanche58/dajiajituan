@@ -1,0 +1,80 @@
+.job-list{
+    .t{ overflow: hidden; background: $hc3; padding: (64px - 40px) / 2 0 (64px - 40px) / 2 40px; @include mt3;
+        @media screen and (max-width:1024px) {
+            padding-left: 5%;
+        }
+        > div{ position: relative; float: left; padding-left: 40px; @include bs; 
+            @media screen and (max-width:1024px) {
+                padding: 0;
+            }
+        }
+    }
+    .nowti{ line-height: 40px; }
+    .j1{ width: 22.4%; 
+        .ico{ background-image: url(../images/ico1.png); }
+        @media screen and (max-width:601px) {
+            width: 40%;
+        }
+    }
+    .j2{ width: 26.8%; 
+        .ico{ background-image: url(../images/ico2.png); }
+        @media screen and (max-width:601px) {
+            display: none;
+        }
+    }
+    .j3{ width: 26.5%; 
+        .ico{ background-image: url(../images/ico3.png); }
+        @media screen and (max-width:601px) {
+            width: 30%;
+        }
+    }
+    .j4{ width: 100% - 22.4% - 26.8% - 26.5%; 
+        .ico{ background-image: url(../images/ico4.png); }
+        @media screen and (max-width:601px) {
+            width: 30%;
+        }
+    }
+    .ico{ display: block; position: absolute; left: 0; top: 0; width: 40px; height: 40px; background-repeat: no-repeat; background-position: left center; 
+        @media screen and (max-width:1024px) {
+            display: none;
+        }
+    }
+    li:first-child{
+        .t{ background: $fc1; font-weight: bold; font-size: 16px; color: #fff; 
+            @media screen and (max-width:1024px) {
+                font-size: 14px;
+            }
+        }
+    }
+    li + li{ margin-top: 5px; 
+        .t{ cursor: pointer; }
+        @media screen and (min-width:1025px) {
+            &.act, &:hover{
+                .t{ background: $mc1; color: #fff; }
+            }
+        }
+    }
+    .b{
+        border: 1px solid $mc1; padding: 40px 80px 80px 80px; margin-top: 2px; display: none;
+        @media screen and (max-width:1024px) {
+            padding-left: 5%; padding-right: 5%;
+        }
+        @media screen and (max-width:601px) {
+            padding-top: 6.67vw; padding-bottom: 13.33vw;
+        }
+    }
+    .set-email{ margin-top: 80px; color: #fff; 
+        @media screen and (max-width:601px) {
+            margin-top: 13.33vw;
+        }
+    }
+}
+
+.set-email{ display: block; width: 176px; height: 46px; background: $mc1; color: #fff; line-height: 46px; text-align: center; 
+    @media screen and (max-width:601px) {
+        width: 136px; height: 42px; line-height: 42px;
+    }
+    @media screen and (min-width:1025px) {
+        &:hover{ background: $fc1; }
+    }
+}

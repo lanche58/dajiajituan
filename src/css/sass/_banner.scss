@@ -1,0 +1,94 @@
+.banner{
+    .txts{
+        @include plr;
+        top: 0;
+        padding: (246 / 1920) * 100% 5% 0;
+        color: #fff;
+    }
+    .en{
+        margin-bottom: 15px;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    .ch{
+        font-size: 62px;
+    }
+    .text{
+        width: 600px;
+        max-width: 100%;
+        margin: 30px auto 0;
+    }
+    .pic2{
+        &:after{
+            @include ba;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 337px;
+            background: url('../images/shadow.png') repeat-x center bottom;
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+        }
+        .m{
+            display: none;
+        }
+    }
+    .slick-dots{
+        display: none !important;
+    }
+    @media screen and (max-width:1366px) {
+        .ch{
+            font-size: 50px;
+        }
+    }
+    @media screen and (max-width:1024px) {
+        .txts{
+            top: 50%;
+            transform: translateY(-50%);
+            padding-top: 0;
+        }
+    }
+    @media screen and (max-width:861px) {
+        .ch{
+            font-size: 40px;
+        }
+        .en{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .text{
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width:641px) {
+        .pic2{
+            img{
+                display: none;
+            }
+            .m{
+                display: block;
+            }
+        }
+        .ch{
+            font-size: 32px;
+        }
+        .en{
+            font-size: 12px;
+        }
+        .text{
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width:481px) {
+        .ch{
+            font-size: 26px;
+        }
+        .en{
+            margin-bottom: 5px;
+        }
+        .text{
+            margin-top: 15px;
+        }
+    }
+}

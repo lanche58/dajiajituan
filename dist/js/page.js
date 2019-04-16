@@ -105,6 +105,7 @@ $(function () {
 
 	// 手机导航
 	$('.navMobile dd > a').bind(_click, function (e) {
+        if (!isMobile) { return; }
 		if($(this).next('.mtv').size() >= 1){
 			if(!$(this).hasClass('act')){
 				e.preventDefault();
@@ -119,19 +120,35 @@ $(function () {
 		}
 	});
 	$menuBtn.bind(_click, function () {
-        if (navItem == 0) {
-            $('html').addClass('open');
-            $(this).addClass('active');
-            $menuBox.show().stop(false,false).animate({top:0});
-            navItem = 1;
+        $('html').addClass('open');
+        $menuBox.show().stop(false,false).animate({top:0});
+    });
+    $('.nav-btn').bind(_click, function() {
+        $('html').addClass('open');
+        $menuBox.show().stop(false,false).animate({right:0});
+        $('.menuBlack').stop().fadeIn(600);
+    });
+    $('.menuBox .close').bind(_click, function() {
+        $('html').removeClass('open');
+        if (!isMobile) {
+            var w = $menuBox.innerWidth();
+            $('.menuBlack').stop().fadeOut(600);
+            $menuBox.stop(false,false).animate({right:-w+"px"},function(){
+                $(this).hide();
+            });
         } else {
-            $('html').removeClass('open');
-            $(this).removeClass('active');
             $menuBox.stop(false,false).animate({top:-100+"%"},function(){
                 $(this).hide();
             });
-            navItem = 0;
-        };
+        }
+    });
+    $('.menuBlack').bind(_click, function() {
+        var w = $menuBox.innerWidth();
+        $('html').removeClass('open');
+        $('.menuBlack').stop().fadeOut(600);
+        $menuBox.stop(false,false).animate({right:-w+"px"},function(){
+            $(this).hide();
+        });
     });
 	
 	

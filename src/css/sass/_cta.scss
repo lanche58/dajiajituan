@@ -1,0 +1,86 @@
+#map{
+    height: 680px;
+    @media screen and (max-width:1366px) {
+        height: 580px;
+    }
+    @media screen and (max-width:601px) {
+        height: (580 / 600) * 100vw;
+    }
+}
+.cta1{
+    padding-bottom: 0 !important;
+    .cta-list{
+        margin-bottom: 70px;
+        margin-top: 80px;
+    }
+    @media screen and (max-width:861px) {
+        .cta-list{
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (max-width:601px) {
+        .cta-list{
+            margin-top: 10vw;
+            margin-bottom: 5vw;
+        }
+    }
+}
+.cta-title{
+    .ch{
+        font-size: 28px;
+        color: $fc1;
+    }
+    .en{
+        margin-top: 23px - 11px;
+        color: $mc1;
+        font-size: 18px;
+        line-height: 1.4;
+        overflow: hidden;
+        span{
+            @include di;
+            position: relative;
+            max-width: 70%;
+            &:before, &:after{
+                @include ba;
+                top: 50%;
+                width: 118px;
+                border-top: 1px solid $mc1;
+            }
+            &:before{
+                right: 100%;
+                margin-right: 12px;
+            }
+            &:after{
+                left: 100%;
+                margin-left: 12px;
+            }
+        }
+    }
+    @media screen and (max-width:601px) {
+        .ch{
+            font-size: 24px;
+        }
+        .en{
+            margin-top: (12 / 600) * 100vw;
+            font-size: 16px;
+            span{
+                &:before{
+                    margin-right: (12 / 600) * 100vw;
+                }
+                &:after{
+                    margin-left: (12 / 600) * 100vw;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:481px) {
+        .ch{
+            font-size: 22px;
+            padding: 0 5%;
+        }
+        .en{
+            font-size: 14px;
+        }
+    }
+}

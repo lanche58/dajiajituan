@@ -1,0 +1,73 @@
+.cta-list{
+    li{
+        width: 25%;
+        padding: 0 30px;
+        @media screen and (min-width:1025px) {
+            &:hover{
+                .icon{
+                    background: $mc1;
+                    border-color: $mc1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .icon{
+        @include di;
+        @include c(70px);
+        border: 1px solid $fc1;
+        line-height: 68px;
+        font-size: 26px;
+        color: $mc1;
+        @include mt3;
+    }
+    .name{
+        margin-top: 10px;
+        text-transform: uppercase;
+        color: $fc3;
+        line-height: 20px;
+    }
+    .text{
+        margin-top: 25px;
+        font-size: 16px;
+    }
+    a{
+        @media screen and (min-width:1025px) {
+            &:not(.na):hover{
+                color: $mc1;
+            }
+        }
+    }
+    .pic2{
+        width: 100px;
+        max-width: 100%;
+        margin: 0 auto;
+        border: 1px solid $hc1;
+    }
+    @media screen and (max-width:1366px) {
+        .text{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width:1024px) {
+        li{
+            padding: 0 15px;
+        }
+    }
+    @media screen and (max-width:861px) {
+        li{
+            width: 50%;
+            margin-bottom: 40px;
+            &:nth-child(2n-1){
+                clear: both;
+            }
+        }
+    }
+    @media screen and (max-width:601px) {
+        li{
+            margin-bottom: (40 / 600) * 100vw;
+            padding: 0 5px;
+        }
+    }
+}
