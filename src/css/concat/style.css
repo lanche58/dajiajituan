@@ -1956,6 +1956,10 @@
 
 .banner .slick-dots {
   display: none !important; }
+  .banner .slick-dots li {
+    background: #fff; }
+  .banner .slick-dots .slick-active {
+    background: #cc332f; }
 
 @media screen and (max-width: 1366px) {
   .banner .ch {
@@ -1965,7 +1969,9 @@
   .banner .txts {
     top: 50%;
     transform: translateY(-50%);
-    padding-top: 0; } }
+    padding-top: 0; }
+  .banner .slick-dots {
+    display: block !important; } }
 
 @media screen and (max-width: 861px) {
   .banner .ch {

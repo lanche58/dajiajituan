@@ -36,6 +36,12 @@
     }
     .slick-dots{
         display: none !important;
+        li{
+            background: #fff;
+        }
+        .slick-active{
+            background: $mc1;
+        }
     }
     @media screen and (max-width:1366px) {
         .ch{
@@ -47,6 +53,9 @@
             top: 50%;
             transform: translateY(-50%);
             padding-top: 0;
+        }
+        .slick-dots{
+            display: block !important;
         }
     }
     @media screen and (max-width:861px) {
