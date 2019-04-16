@@ -7,7 +7,7 @@
         color: #fff;
         line-height: 46px;
         text-align: center;
-        font-size: 16px;
+        // font-size: 16px;
         &.act{
             background: $mc1;
         }
@@ -28,11 +28,11 @@
             width: 33.33%;
         }
     }
-    @media screen and (max-width:601px) {
-        a{
-            font-size: 14px;
-        }
-    }
+    // @media screen and (max-width:601px) {
+    //     a{
+    //         font-size: 14px;
+    //     }
+    // }
     @media screen and (max-width:481px) {
         a{
             width: 50%;

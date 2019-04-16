@@ -1305,7 +1305,7 @@ a.pswp__share--download:hover{background:#ddd}
 @media screen and (max-width:601px){
 .pro3 .achi-list{margin-top:10vw;margin-bottom:6.66667vw}
 }
-.pro-nav a{width:186px;border-left:1px solid #fff;border-bottom:1px solid #fff;background:#333;color:#fff;line-height:46px;text-align:center;font-size:16px}
+.pro-nav a{width:186px;border-left:1px solid #fff;border-bottom:1px solid #fff;background:#333;color:#fff;line-height:46px;text-align:center}
 .pro-nav a.act{background:#cc332f}
 @media screen and (min-width:1025px){
 .pro-nav a:hover{background:#cc332f}
@@ -1316,9 +1316,6 @@ a.pswp__share--download:hover{background:#ddd}
 }
 @media screen and (max-width:861px){
 .pro-nav a{width:33.33%}
-}
-@media screen and (max-width:601px){
-.pro-nav a{font-size:14px}
 }
 @media screen and (max-width:481px){
 .pro-nav a{width:50%;line-height:40px}
@@ -1456,11 +1453,16 @@ a.pswp__share--download:hover{background:#ddd}
 }
 .job1 .freeTx.w1{width:720px}
 .job1 .idea-list{margin-top:80px;margin-bottom:70px}
+.job1 .fixbg{height:650px}
+@media screen and (max-width:1366px){
+.job1 .fixbg{height:550px}
+}
 @media screen and (max-width:861px){
 .job1 .idea-list{margin-top:60px;margin-bottom:30px}
 }
 @media screen and (max-width:601px){
 .job1 .idea-list{margin-top:10vw;margin-bottom:5vw}
+.job1 .fixbg{height:75vw}
 }
 .idea-list{margin-left:-80px}
 .idea-list li{width:25%;float:left}
@@ -1486,10 +1488,13 @@ a.pswp__share--download:hover{background:#ddd}
 @media screen and (max-width:481px){
 .idea-list li{width:100%;margin-bottom:6.66667vw}
 }
-.idea-item .title{width:108px;height:108px;border-radius:100%;border:1px solid #cc332f;max-width:100%;margin:0 auto;padding-top:30px;color:#cc332f}
+.idea-item .title{width:108px;height:108px;border-radius:100%;border:1px solid #cc332f;max-width:100%;margin:0 auto;padding-top:30px;color:#cc332f;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
 .idea-item .ch{margin-bottom:4px;font-size:20px}
 .idea-item .text{margin-top:17px}
 .idea-item .en{text-transform:capitalize}
+@media screen and (min-width:1025px){
+.idea-item:hover .title{background:#cc332f;color:#fff}
+}
 @media screen and (max-width:481px){
 .idea-item .text{margin-top:2.83333vw}
 .idea-item .title{width:88px;height:88px;padding-top:24px}
